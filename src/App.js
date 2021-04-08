@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import runChapter2 from './chapters/chapter-2'
 
 function App() {
+  runChapter2();
   return (
     <div className="App">
       <header className="App-header">

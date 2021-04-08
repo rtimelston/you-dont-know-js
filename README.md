@@ -1,8 +1,7 @@
-# Getting Started with Create React App
+# you-dont-know-js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+This repo is a collection of scratch files created while going through Kyle Simpson's _You Don't Know JS_ series, as accessed
+on Safari Books Online.
 
 In the project directory, you can run:
 
