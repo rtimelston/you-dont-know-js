@@ -123,5 +123,56 @@ const runChapter2 = () => {
 
   foo ? console.log(`foo function is truthy`) : console.log(`foo function is falsy`)
 
+  // Equality
+  a = '42'
+  b = 42
+
+  console.log('a = \'4s\'')
+  console.log('b = 42')
+  console.log('a == b, true because checks value with coersion allowed: ' + a == b) // == checks value with coersion allowed
+  console.log('a === b, false because checks value and type: ' + a === b)
+
+  a = [1,2,3]
+  b = [1,2,3]
+  let c = "1,2,3"
+
+  console.log('a = [1,2,3]')
+  console.log('b = [1,2,3]')
+  console.log('c = "1,2,3"')
+
+  console.log(`a == c, true because == coerces arrays to strings: ${a == c}`)
+  console.log(`b == c, true because == coerces arrays to strings: ${b == c }`)
+  console.log(`a == b, false because == for non-primities checks references, not object value or type: ${a == b}`)
+
+  // Inequality
+  a = 41
+  b = "42"
+  c = "43"
+
+  console.log('a = 41')
+  console.log('b = "42"')
+  console.log('c = "43"')
+
+  console.log(`a < b, true due to coersion to numbers: ${a < b}`)
+  console.log(`b < c, true because if both are strings they are compared lexicographically: ${b < c}`)
+
+  b = "foo"
+
+  console.log('a = 41')
+  console.log(`b = "foo"`)
+
+  console.log(`a < b, false because < tries to coerce "foo" to a number but gets NaN, which is neither greater nor less than any value: ${a < b}`)
+  console.log(`a > b, false because > tries to coerce "foo" to a number but gets NaN, which is neither greater nor less than any value: ${a < b}`)
+  console.log(`a == b, false because == tries to coerce "foo" to a number but gets NaN, which is not equal to 41: ${a < b}`)
+
+  // Variables
+  const $a = 42
+  console.log(`$a = 42`)
+  console.log(`console.log($a) prints 42 because starting a variable with $ is valid: ${$a}`)
+
+  const _b = "bar"
+  console.log(`_b = "bar"`)
+  console.log(`console.log(_b) prints bar because starting a variable with _ is valid: ${_b}`)
+
 }
 export default runChapter2;
